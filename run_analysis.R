@@ -76,4 +76,3 @@ RunAnalysis <- function() {
   mySum <<- mySum
   
 }
-  

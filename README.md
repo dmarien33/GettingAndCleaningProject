@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #RunAnalysis function in run_analysis.R file
 ## load dplyr package
 ## Download files from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzip in working directory
@@ -49,3 +50,7 @@
   
 }
   
+=======
+# GettingAndCleaningProject
+Course Getting and Cleaning Data Project
+>>>>>>> eabd20ecf2f9779dc95015e705a5abd82a1b4547
