@@ -1,5 +1,7 @@
 #Project Description
-Create a tidy data set from data collected using Samsung Galaxy S II smartphones and downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:.
+Create a tidy data set from data collected using Samsung Galaxy S II 
+smartphones and downloaded from 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:.
 
 ##Project Requirements (from Coursera Getting and Cleaning Data website):
 “You should create one R script called run_analysis.R that does the following.
@@ -14,7 +16,9 @@ variable for each activity and each subject.”
 #Study Design and Data Processing
 
 ##Collection of the Raw Data
-Contents of the README.txt file included with the dataset .zip file downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:
+Contents of the README.txt file included with the dataset .zip file 
+downloaded from 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:
 
 “Human Activity Recognition Using Smartphones Dataset
 Version 1.0
@@ -27,9 +31,22 @@ activityrecognition@smartlab.ws
 www.smartlab.ws
 ==================================================================
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
+wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 
+we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+The experiments have been video-recorded to label the data manually. The obtained dataset 
+has been randomly partitioned into two sets, where 70% of the volunteers was selected for 
+generating the training data and 30% the test data. 
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters 
+and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). 
+The sensor acceleration signal, which has gravitational and body motion components, 
+was separated using a Butterworth low-pass filter into body acceleration and gravity. 
+The gravitational force is assumed to have only low frequency components, therefore a 
+filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features 
+was obtained by calculating variables from the time and frequency domain. 
+See 'features_info.txt' for more details. 
 
 For each record it is provided:
 ======================================
@@ -50,10 +67,16 @@ The dataset includes the following files:
 - 'test/X_test.txt': Test set.
 - 'test/y_test.txt': Test labels.
 The following files are available for the train and test data. Their descriptions are equivalent. 
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each 
+window sample. Its range is from 1 to 30. 
+- 'train/Inertial Signals/total_acc_x_train.txt': 
+The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. 
+Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' 
+and 'total_acc_z_train.txt' files for the Y and Z axis. 
+- 'train/Inertial Signals/body_acc_x_train.txt': 
+The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+- 'train/Inertial Signals/body_gyro_x_train.txt': 
+The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 Notes: 
 ======
 - Features are normalized and bounded within [-1,1].
@@ -65,20 +88,37 @@ License:
 ========
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
+Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. 
+International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+This dataset is distributed AS-IS and no responsibility implied or explicit 
+can be addressed to the authors or their institutions for its use or misuse. 
+Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.”
 
 ##Notes on the Raw Data
-From the features_info.txt file included with the dataset .zip file downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:
+From the features_info.txt file included with the dataset .zip file 
+downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip:
 
-“The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+“The features selected for this database come from the accelerometer 
+and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time 
+domain signals (prefix 't' to denote time) were captured at a constant 
+rate of 50 Hz. Then they were filtered using a median filter and a 3rd 
+order low pass Butterworth filter with a corner frequency of 20 Hz to 
+remove noise. Similarly, the acceleration signal was then separated into 
+body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) 
+using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Subsequently, the body linear acceleration and angular velocity were derived in 
+time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the 
+magnitude of these three-dimensional signals were calculated using the Euclidean 
+norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals 
+producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, 
+fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
@@ -101,30 +141,54 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-The set of variables that were estimated from these signals are (emphasis added and information collapsed): 
+The set of variables that were estimated from these signals are (information collapsed): 
 
-mean(): Mean value; std(): Standard deviation; mad(): Median absolute deviation ; max(): Largest value in array; min(): Smallest value in array; sma(): Signal magnitude area; energy(): Energy measure. Sum of the squares divided by the number of values. ; iqr(): Interquartile range ; entropy(): Signal entropy; arCoeff(): Autorregresion coefficients with Burg order equal to 4; correlation(): correlation coefficient between two signals; maxInds(): index of the frequency component with largest magnitude; meanFreq(): Weighted average of the frequency components to obtain a mean frequency; skewness(): skewness of the frequency domain signal ; kurtosis(): kurtosis of the frequency domain signal ; bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.; angle(): Angle between to vectors.”
+mean(): Mean value; std(): Standard deviation; mad(): Median absolute deviation ; 
+max(): Largest value in array; min(): Smallest value in array; sma(): 
+Signal magnitude area; energy(): Energy measure. 
+Sum of the squares divided by the number of values. ; 
+iqr(): Interquartile range ; entropy(): Signal entropy; 
+arCoeff(): Autorregresion coefficients with Burg order equal to 4; 
+correlation(): correlation coefficient between two signals; maxInds(): 
+index of the frequency component with largest magnitude; meanFreq(): 
+Weighted average of the frequency components to obtain a mean frequency; 
+skewness(): skewness of the frequency domain signal ; 
+kurtosis(): kurtosis of the frequency domain signal ; 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.; 
+angle(): Angle between to vectors.”
 
 
 #Creating the Tidy Datafile
 1. Download the data and unzip the files to the working directory.
-2. Use read.table to read the following files included in the .zip file in to R:  X_train.txt and  X_test.txt (observations); y_train.txt and y_test.txt (activity performed during each observation, integer code); subject_train.txt and subject_test.txt (subject performing activity during observation_, activity_labels.txt (description of activity corresponding to integer code) .
+2. Use read.table to read the following files included in the .zip file in to R:  
+X_train.txt and  X_test.txt (observations); y_train.txt and y_test.txt 
+(activity performed during each observation, integer code); 
+subject_train.txt and subject_test.txt 
+(subject performing activity during observation_, activity_labels.txt 
+(description of activity corresponding to integer code).
 3. Use read.delim to read in features.txt (column names for X_train.txt and  X_test.txt)
 4. Create column names for X_train and X_test using the names in features.txt
 5. Combine the subject, activity and observation data frames for the test data set.
 6. Combine the subject, activity and observation data frames for the training data set.
 7. Combine the test and training data frames into one data frame.
-8. Take a subset of just the observation variables with both a mean and a standard deviation in the combined test and training data frames.  Include subject and activity columns.
+8. Take a subset of just the observation variables with both a mean and a 
+standard deviation in the combined test and training data frames.  
+Include subject and activity columns.
 9. Load the dplyr package
-10. Merge the activity_labels data frame with the data frame created in step 7.  This step is done after all the data is combined and subsetted to avoid reordering the data.
+10. Merge the activity_labels data frame with the data frame created in step 7.  
+This step is done after all the data is combined and subsetted to avoid reordering the data.
 11. Rename the observation columns to reflect the fact that the original data has been averaged.
-12. Group the data frame created in step 9 by Subject, Activity Code, and Activity, then summarize the data by the groups and calculate the mean of each observation for each subject/activity/activity code combination.
+12. Group the data frame created in step 9 by Subject, Activity Code, and Activity, 
+then summarize the data by the groups and calculate the mean of each observation 
+for each subject/activity/activity code combination.
 13. Rename the variables to indicate if the variable in the tidy data set is an average.
 
 Here are the reasons why I retained the variable names provided in the features.txt file:
 
-1. The variable names provided by the authors did a good job of describing the variables in a compact manner.   
-2. The authors are subject matter experts in the field and I am not; therefore I did not feel like questioning their choices.
+1. The variable names provided by the authors did a good job of 
+describing the variables in a compact manner.   
+2. The authors are subject matter experts in the field and 
+I am not; therefore I did not feel like questioning their choices.
 
 
 #Descripion of the Variables in the Tidy Dataset
@@ -138,7 +202,9 @@ Here are the reasons why I retained the variable names provided in the features.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each
 variable for each activity and each subject.”
 
-I felt that Project Requirements  item 2 means that only observations with  both a mean and a standard deviation should be chosen.  Therefore I chose variables from this list where both means and standard deviations had been calculated:
+I felt that Project Requirements  item 2 means that only observations with 
+both a mean and a standard deviation should be chosen.  Therefore I chose 
+variables from this list where both means and standard deviations had been calculated:
 tBodyAcc-XYZ
 tGravityAcc-XYZ
 tBodyAccJerk-XYZ
@@ -166,12 +232,15 @@ FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [58] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [77] FALSE FALSE FALSE
 
-I chose to retain both the integer activity code and the activity label because I wanted the option to sort
-numerically or alphabetically.  In addition, using a number in a condition takes less space than typing in a text description.
+I chose to retain both the integer activity code and the activity label because I 
+wanted the option to sort numerically or alphabetically.  In addition, using 
+a number in a condition takes less space than typing in a text description.
 
 The tidy dataset has 180 observations and 69 variables.  There is one subject/activity combination per 
-row and each variable is in its own column.  Neither the README nor the features_info file had details on the units of 
-measurement.  The variable names were created by adding “Average(“ at the beginning of the original variable name and closing the parentheses at the end of the original variable name.
+row and each variable is in its own column.  Neither the README nor the features_info file 
+had details on the units of measurement.  The variable names were created by adding 
+“Average(“ at the beginning of the original variable name and closing the parentheses 
+at the end of the original variable name.
 
 Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of  69 variables:
  $ Subject                             : int  1 1 1 1 1 1 2 2 2 2 ...
@@ -384,4 +453,5 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of  69 variable
  3rd Qu.:-0.5831                      3rd Qu.:-0.6081                    
  Max.   : 0.1466                      Max.   : 0.2878 
 
-Sources:  The Elements of Data Analytic Style  (Jeff Leek), Code Book Template (https://gist.github.com/JorisSchut), Getting and Cleaning the Assignment  (https://thoughtfulbloke.wordpress.com/; thoughtfulbloke aka David Hood)
+Sources:  The Elements of Data Analytic Style  (Jeff Leek), Code Book Template (https://gist.github.com/JorisSchut), 
+Getting and Cleaning the Assignment  (https://thoughtfulbloke.wordpress.com/; thoughtfulbloke aka David Hood)
