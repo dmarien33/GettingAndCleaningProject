@@ -13,10 +13,15 @@
 ## read in variable names in features.txt--do not convert to factors (header = FALSE, sep = " ", colClasses = "character") 
   
 ## read in activity labels with read.table
-* make column names "ActivityCode", "Activity"
+* make column names "ActivityCode" (integer), "Activity" (character)
 
 ## assign variable names to test and training observations
 * use variable names in features.txt
+*Here are the reasons why I retained the variable names provided in the features.txt file:
+1. The variable names provided by the authors did a good job of 
+describing the variables in a compact manner.   
+2. The authors are subject matter experts in the field and I am not; 
+therefore I did not feel like questioning their choices.
 
 ## combine the subject, activity and observation data frames for the test data set using cbind
 
@@ -34,7 +39,9 @@
 ## sort by Subject, ActivityCode, Activity then group by Subject, ActivityCode, Activity
   
 ## summarize each of the variables (calculate the mean) by Subject, ActivityCode, Activity
-* I grouped by ActivityCode because I thought that it would make things neater
+* I included ActivityCode as a grouping variable because I thought that it would make things neater
+* I also wanted to include the Activity code because I wanted the option to do a numeric or
+alphabetical sort.  Typing a number in a condition also takes less space than typing in the label
   
 ## change the variable names and output the file
 * I changed the variable names by adding Average() to each variable where the mean was calculated (example:  Average(tBodyAcc-mean()-X))
@@ -45,10 +52,6 @@
 * read in the file "MySumColumnClasses.csv" which contains the column classes
 * code to read in data: testRead <- read.table("PhoneDataSummary.txt", header = TRUE, sep = " ", colClasses = ColVect) 
 * ColVect is the vector of column classes created by reading in "MySumColumnClasses.csv"
-
-
-  
-}
   
 =======
 # GettingAndCleaningProject
